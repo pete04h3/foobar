@@ -48,7 +48,7 @@ class App extends React.Component {
           <label> Student ID:</label>
           <h3>[{this.state.data}]</h3>
           <label> Students in queue:</label>
-          <h5>{this.state.data2}</h5>
+          <h5 className="spinner">{this.state.data2}</h5>
           <label>Logged At:</label>
           <h3>[{this.state.data3}]</h3>
         </article>

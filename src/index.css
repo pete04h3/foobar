@@ -25,10 +25,6 @@ body {
   transform: translate(0px, -65px);
 }
 
-.filterSwap {
-  filter: grayscale(100%);
-}
-
 .contentwrapper {
   padding: 6rem;
   width: 50%;
