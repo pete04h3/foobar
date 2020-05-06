@@ -6,13 +6,15 @@ class App extends React.Component {
   state = {
     data: "",
     data2: "",
+    data3: "",
+    data4: "",
   };
 
   componentDidMount() {
     this.getData();
     this.interval = setInterval(() => {
       this.getData();
-    }, 10000);
+    }, 5000); //getting api every 5 sec
   }
 
   getData() {
@@ -39,16 +41,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="contentwrapper">
-        <label>Bar:</label>
-        <h1>{this.state.data5}</h1>
-        <label>Personel:</label>
-        <h2>{this.state.data4}</h2>
-        <label>ID:</label>
-        <h3>{this.state.data}</h3>
-        <label>inQueue:</label>
-        <h3>{this.state.data2}</h3>
-        <label>Logged At:</label>
-        <h3>{this.state.data3}</h3>
+        <article>
+          <h1>[{this.state.data5}]</h1>
+          <label>Crew:</label>
+          <h2>[{this.state.data4}]</h2>
+          <label> Student ID:</label>
+          <h3>[{this.state.data}]</h3>
+          <label> Students in queue:</label>
+          <h5>{this.state.data2}</h5>
+          <label>Logged At:</label>
+          <h3>[{this.state.data3}]</h3>
+        </article>
       </div>
     );
   }

@@ -10,12 +10,58 @@ code {
 }
 
 body {
-  background: palevioletred;
+  background: black;
+  overflow: hidden;
+  border: 30px solid black;
+  border-bottom: 30px solid black;
+  border-top: 30px solid black;
+}
+
+#root {
+  background-image: url("https://i.pinimg.com/originals/0c/4e/07/0c4e0745256ac08b3a518cad3174c929.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: invert(1);
+  transform: translate(0px, -65px);
+}
+
+.filterSwap {
+  filter: grayscale(100%);
 }
 
 .contentwrapper {
-  padding: 2rem;
-  background: palegreen;
+  padding: 6rem;
   width: 50%;
   height: 100vh;
+  color: white;
+}
+article {
+  padding: 3rem;
+}
+h1 {
+  font-size: 5rem;
+  float: right;
+  font-family: monospace;
+}
+
+h5 {
+  width: 20%;
+  font-size: 4rem;
+}
+
+.spinner {
+  animation-name: spinner;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  transform-style: preserve-3d;
+  text-align: center;
+}
+@keyframes spinner {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
 }
